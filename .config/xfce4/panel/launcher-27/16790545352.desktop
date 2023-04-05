@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Termite
+Comment=Use the command line
+Exec=termite
+Icon=utilities-terminal
+Type=Application
+Categories=GTK;System;TerminalEmulator;
+StartupNotify=true
+GenericName=Terminal Emulator
+X-XFCE-Source=file:///usr/share/applications/termite.desktop

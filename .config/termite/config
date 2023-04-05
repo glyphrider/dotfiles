@@ -1,0 +1,10 @@
+[options]
+font = "Noto Color Emoji" 12
+font = "JoyPixels" 12
+font = "Hack Nerd Font Mono" 12
+font = "Hack Nerd Font" 12
+font = Monospace 12
+font = Hack 12
+
+[colors]
+background = rgba(63, 63, 63, 0.85)
