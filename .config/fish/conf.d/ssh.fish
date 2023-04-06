@@ -1,17 +1,3 @@
-fish_add_path ~/.cargo/bin
-
-function ll
-  exa -alF --icons --color=auto --group-directories-first --git $argv
-end
-
-function ls
-  exa -F --icons --color=auto --group-directories-first --git $argv
-end
-
-function la
-  exa -aF --icons --color=auto --group-directories-first --git $argv
-end
-
 if status is-interactive
 	# Commands to run in interactive sessions can go here
 	set SSH_ENV "$HOME/.ssh/agent-environment"
