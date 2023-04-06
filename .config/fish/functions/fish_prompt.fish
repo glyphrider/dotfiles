@@ -1,7 +1,7 @@
 function fish_prompt
     # This prompt shows:
     # - green lines if the last return command is OK, red otherwise
-    # - your user name, in red if root or yellow otherwise
+    # - your user name, in red if root or gray otherwise
     # - your hostname, in cyan if ssh or blue otherwise
     # - the current path (with prompt_pwd)
     # - date +%X
@@ -21,7 +21,8 @@ function fish_prompt
     # ╰─>$ echo there
 
     set -l retc red
-    test $status = 0; and set retc green
+    set -l pc red
+    test $status = 0; and set retc normal; and set pc brblue
 
     set -q __fish_git_prompt_showupstream
     or set -g __fish_git_prompt_showupstream auto
@@ -34,46 +35,42 @@ function fish_prompt
         set_color normal
         set_color $retc
         echo -n '─'
-        set_color -o green
+        set_color -o normal
         echo -n '['
         set_color normal
         test -n $field_name
         and echo -n $field_name:
         set_color $retc
         echo -n $field_value
-        set_color -o green
+        set_color -o normal
         echo -n ']'
     end
 
     set_color $retc
     echo -n '┬─'
-    set_color -o green
+    set_color -o normal
     echo -n [
 
     if functions -q fish_is_root_user; and fish_is_root_user
         set_color -o red
     else
-        set_color -o yellow
+        set_color -o normal
     end
-
-    echo -n $USER
-    set_color -o white
-    echo -n @
 
     if test -z "$SSH_CLIENT"
-        set_color -o blue
+        set_color -o normal
     else
         set_color -o cyan
+        echo -n $USER
+        echo -n @
+        echo -n (prompt_hostname)
+        set_color -o normal
+        echo -n :
     end
 
-    echo -n (prompt_hostname)
-    set_color -o white
-    echo -n :(prompt_pwd)
-    set_color -o green
+    echo -n (prompt_pwd)
+    set_color -o normal
     echo -n ']'
-
-    # Date
-    _nim_prompt_wrapper $retc '' (date +%X)
 
     # Vi-mode
     # The default mode prompt would be prefixed, which ruins our alignment.
@@ -100,23 +97,6 @@ function fish_prompt
         _nim_prompt_wrapper $retc '' $mode
     end
 
-
-    # Virtual Environment
-    set -q VIRTUAL_ENV_DISABLE_PROMPT
-    or set -g VIRTUAL_ENV_DISABLE_PROMPT true
-    set -q VIRTUAL_ENV
-    and _nim_prompt_wrapper $retc V (basename "$VIRTUAL_ENV")
-
-    # git
-    set -l prompt_git (fish_git_prompt '%s')
-    test -n "$prompt_git"
-    and _nim_prompt_wrapper $retc G $prompt_git
-
-    # Battery status
-    type -q acpi
-    and test (acpi -a 2> /dev/null | string match -r off)
-    and _nim_prompt_wrapper $retc B (acpi -b | cut -d' ' -f 4-)
-
     # New line
     echo
 
@@ -126,14 +106,14 @@ function fish_prompt
     for job in (jobs)
         set_color $retc
         echo -n '│ '
-        set_color brown
+        set_color cyan
         echo $job
     end
 
     set_color normal
     set_color $retc
     echo -n '╰─>'
-    set_color -o red
+    set_color -o $pc
     echo -n '$ '
     set_color normal
 end

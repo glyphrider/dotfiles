@@ -1,0 +1,46 @@
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$os\
+$container\
+$shell\
+$character"""
+
+[git_branch]
+format='\[[$symbol$branch(:$remote_branch)]($style)\] '
+
+[username]
+show_always=true
+format='[$user]($style)'
+
+[hostname]
+ssh_only=false
+format='@[$ssh_symbol$hostname]($style): '
+
+[directory]
+fish_style_pwd_dir_length=2

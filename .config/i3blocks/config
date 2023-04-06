@@ -1,0 +1,37 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[public-ip]
+color=#00FF00
+command=wget -qO - icanhazip.com | awk '{printf("Public IP: %s\n%s\ngreen\n",$1,$1)}'
+interval=once
+
+# Guess the weather hourly
+[weather]
+command=curl -Ss 'https://wttr.in?format=%c+%f+%h+%m+%w' | xargs echo
+interval=3600
+color=#A4C2F4
+
+# [documentation]
+# full_text=Documentation
+# website=https://vivien.github.io/i3blocks
+# command=xdg-open "$website"
+# color=#f12711
+
+# [greetings]
+# color=#f5af19
+# command=echo "Hello, $USER!"
+# interval=once
+
+[time]
+command=date '+%A, %B %-d, %Y %-I:%M:%S%P'
+interval=1
