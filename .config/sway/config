@@ -66,7 +66,7 @@ output * bg /usr/share/backgrounds/archlinux/gritty.png fill
 #
     # Start a terminal
     bindsym $mod+Return exec $term -T main tmux new-session -A -s main
-
+    bindsym $mod+Q exec $term
     # Kill focused window
     bindsym $mod+Shift+q kill
 
