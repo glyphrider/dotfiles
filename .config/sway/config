@@ -230,4 +230,6 @@ exec swayidle -w \
 
 bindsym $mod+x exec swaylock -f
 
+default_border pixel 2
+
 include /etc/sway/config.d/*
