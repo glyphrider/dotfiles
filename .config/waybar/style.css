@@ -150,11 +150,12 @@ tooltip {
 #custom-weather {
     border-radius: 0px 10px 10px 0px;
     border-right: 0px;
+    border-left: 0px;
     margin-left: 0px;
 }
 
 #custom-public_ip {
   color: #80c020;
-  margin-left: 0px;
-  margin-right: 0px;
+  border-left: 0px;
+  border-right: 0px;
 }
