@@ -9,7 +9,7 @@
     "modules-left": ["clock","custom/weather","wlr/workspaces"],
     "modules-center": ["hyprland/window"],
     //"modules-right": ["network", "bluetooth", "temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
-    "modules-right": ["network", "pulseaudio","pulseaudio#microphone","tray"],
+    "modules-right": ["network", "custom/public_ip", "pulseaudio","pulseaudio#microphone"], // "tray"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -135,5 +135,11 @@
 	    "tooltip-format": "{device_alias}",
 	    "tooltip-format-connected": " {device_enumerate}",
 	    "tooltip-format-enumerate-connected": "{device_alias}"
+    },
+
+    "custom/public_ip": {
+      "format": "{} 󰖈",
+      "exec": "wget -qO - icanhazip.com | awk '{print $1}'",
+      "interval": 600
     }
 }
