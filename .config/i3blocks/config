@@ -12,7 +12,7 @@ separator_block_width=15
 
 [public-ip]
 color=#00FF00
-command=wget -qO - icanhazip.com | awk '{printf("Public IP: %s\n%s\ngreen\n",$1,$1)}'
+command=wget -qO - icanhazip.com | awk '{printf("Public IP: %s 󰖈\n",$1)}'
 interval=once
 
 # Guess the weather hourly
