@@ -40,3 +40,8 @@ color=#A4C2F4
 [time]
 command=date '+%a, %b %-d, %Y %-I:%M:%S%P'
 interval=1
+
+[battery]
+command=acpi -b | cut -c 12-
+interval=10
+color=#f5af19
