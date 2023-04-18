@@ -10,9 +10,14 @@
 separator=true
 separator_block_width=15
 
+[local-ip]
+color=#f5af19
+command=ip route get 1 | head -1 | sed 's/\([^ ]*\) via \([^ ]*\) dev \([^ ]*\) src \([^ ]*\) uid .*/\3: \4 /'
+interval=once
+
 [public-ip]
 color=#00FF00
-command=wget -qO - icanhazip.com | awk '{printf("Public IP: %s 󰖈\n",$1)}'
+command=wget -qO - icanhazip.com | awk '{printf("public: %s 󰖈\n",$1)}'
 interval=once
 
 # Guess the weather hourly
@@ -33,5 +38,5 @@ color=#A4C2F4
 # interval=once
 
 [time]
-command=date '+%A, %B %-d, %Y %-I:%M:%S%P'
+command=date '+%a, %b %-d, %Y %-I:%M:%S%P'
 interval=1

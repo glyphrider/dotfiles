@@ -11,10 +11,14 @@ if [ -r ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 PS1='[\u@\h \W]\$ '
-source ~/.asdf/asdf.sh
-PATH="${HOME}/.cargo/bin:${PATH}"
+if [ -r ~/.asdf/asdf.sh ]; then
+  source ~/.asdf/asdf.sh
+fi
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 if [ -r ~/.prompt ]; then
 	source ~/.prompt
+fi
+if [ -r ~/.cargo/env ]; then
+  source "$HOME/.cargo/env"
 fi
