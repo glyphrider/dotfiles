@@ -225,12 +225,12 @@ bar {
 font pango:Hack Nerd Font Mono 12
 gaps inner 10
 exec swayidle -w \
-  timeout 180 'swaylock -f' \
+  timeout 180 'swaylock-fancy' \
   timeout 300 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock -f'
+  before-sleep 'swaylock-fancy'
 
-bindsym $mod+x exec swaylock -f
+bindsym $mod+x exec swaylock-fancy
 
 default_border pixel 2
 
