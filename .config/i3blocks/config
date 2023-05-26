@@ -10,9 +10,9 @@
 separator=true
 separator_block_width=15
 
-[local-ip]
+[local-wired]
 color=#f5af19
-command=ip route get 1 | head -1 | sed 's/\([^ ]*\) via \([^ ]*\) dev \([^ ]*\) src \([^ ]*\) uid .*/\3: \4 /'
+command=ip route get 1 | head -1 | sed 's/\([^ ]*\) via \([^ ]*\) dev \([^ ]*\) src \([^ ]*\) uid .*/\3: \4 󰈀/'
 interval=once
 
 [public-ip]
