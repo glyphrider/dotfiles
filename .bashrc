@@ -22,3 +22,5 @@ fi
 if [ -r ~/.cargo/env ]; then
   source "$HOME/.cargo/env"
 fi
+
+eval "$(starship init bash)"

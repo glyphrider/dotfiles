@@ -70,6 +70,9 @@ output DP-2 position 0 0
     # Start a terminal
     bindsym $mod+Return exec $term -T main tmux new-session -A -s main
     bindsym $mod+Q exec $term
+
+    bindsym $mod+Shift+g exec google-chrome-stable --new-window --app=https://chat.openai.com
+
     # Kill focused window
     bindsym $mod+Shift+q kill
 
@@ -228,8 +231,8 @@ bar {
 font pango:Hack Nerd Font Mono 12
 gaps inner 10
 exec swayidle -w \
-  timeout 180 'swaylock-fancy' \
-  timeout 300 'swaymsg "output * dpms off"' \
+  timeout 600 'swaylock-fancy' \
+  timeout 1800 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"' \
   before-sleep 'swaylock-fancy'
 
