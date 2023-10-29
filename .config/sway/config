@@ -27,8 +27,6 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * bg /usr/share/backgrounds/archlinux/gritty.png fill
 
-output DP-1 position 2560 0
-output DP-2 position 0 0
 #
 # Example configuration:
 #
