@@ -21,7 +21,6 @@ $crystal\
 $custom\
 $sudo\
 $cmd_duration\
-$line_break\
 $jobs\
 $battery\
 $time\
@@ -30,6 +29,13 @@ $os\
 $container\
 $shell\
 $character"""
+
+[character]
+success_symbol='[󰐊](bold green)'
+error_symbol='[󰓛](bold red)'
+
+[cmd_duration]
+format='[$duration]($style) '
 
 [git_branch]
 format='\[[$symbol$branch(:$remote_branch)]($style)\] '
