@@ -5,11 +5,15 @@
     font-weight: bold;
     font-size: 16px;
     min-height: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 window#waybar {
-    background: rgba(21, 18, 27, 0);
+    background: rgba(21, 18, 27, 0.4);
     color: #f6f7fc;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 tooltip {
@@ -26,21 +30,18 @@ tooltip label{
 }
 
 #workspaces button {
-    padding: 5px;
-    color: #f6f7fc;
+    font-size: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #000000;
+    border-radius: 10px;
     margin-right: 5px;
 }
 
-#workspaces button.active {
-    color: #000000;
-    background: #f6f7fc;
-    border-radius: 10px;
-}
-
-#workspaces button:hover {
-    background: #11111b;
-    color: #cdd6f4;
-    border-radius: 10px;
+#workspaces button.focused {
+    color: #f6f7fc;
 }
 
 #custom-launch_wofi,
@@ -58,16 +59,12 @@ tooltip label{
 #custom-weather,
 #custom-myhyprv,
 #window,
-#cpu,
 #disk,
 #custom-updates,
-#memory,
-#clock,
 #battery,
 #pulseaudio,
 #network,
 #tray,
-#temperature,
 #workspaces,
 #idle_inhibitor,
 #backlight {
@@ -78,8 +75,21 @@ tooltip label{
     border: 0px;
 }
 
+#clock,
+#cpu,
+#memory,
+#temperature {
+    background: #f6f7fc;
+    color: #15121b;
+    opacity: 1;
+    padding: 0px 8px;
+    margin: 0px 3px;
+    border: 0px;
+    border-radius: 7px;
+}
+
 #temperature.critical {
-    color: #e92d4d;
+    background: #e92d4d;
 }
 
 #workspaces {
