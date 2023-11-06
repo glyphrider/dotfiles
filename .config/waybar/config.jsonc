@@ -25,15 +25,6 @@
         "~/.config/waybar/mesu.jsonc"
     ],
 
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "󰛐",
-            "deactivated": "󰛑"
-        },
-        "tooltip": true
-    },
-
     "custom/power_btn": {
         "format": "",
         "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
@@ -42,7 +33,7 @@
 
     "wlr/taskbar": {
       "format": "{icon}",
-      "icon-size": 24,
+      "icon-size": 16,
       "all-outputs": false,
       "tooltip-format": "{name} - {title}",
       "ignore-list": [
@@ -60,17 +51,29 @@
         "disable-scroll": true,
         // "all-outputs": true,
         "on-click": "activate",
+//        "format-icons": {
+//          "1": "󰲡",
+//          "2": "󰲣",
+//          "3": "󰲥",
+//          "4": "󰲧",
+//          "5": "󰲩",
+//          "6": "󰲫",
+//          "7": "󰲭",
+//          "8": "󰲯",
+//          "9": "󰲱",
+//          "10": "󰿭"
+//        },
         "format-icons": {
-          "1": "󰲡",
-          "2": "󰲣",
-          "3": "󰲥",
-          "4": "󰲧",
-          "5": "󰲩",
-          "6": "󰲫",
-          "7": "󰲭",
-          "8": "󰲯",
-          "9": "󰲱",
-          "10": "󰿭"
+          "1": "󰲠",
+          "2": "󰲢",
+          "3": "󰲤",
+          "4": "󰲦",
+          "5": "󰲨",
+          "6": "󰲪",
+          "7": "󰲬",
+          "8": "󰲮",
+          "9": "󰲰",
+          "10": "󰿬"
         },
         "format": "{icon}"
     },
