@@ -63,7 +63,6 @@ tooltip label{
 #custom-updates,
 #battery,
 #pulseaudio,
-#network,
 #tray,
 #workspaces,
 #idle_inhibitor,
@@ -78,6 +77,7 @@ tooltip label{
 #clock,
 #cpu,
 #memory,
+#network,
 #temperature,
 #workspaces {
     background: #f6f7fc;
