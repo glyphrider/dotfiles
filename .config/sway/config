@@ -25,10 +25,6 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#output * bg /usr/share/backgrounds/archlinux/gritty.png fill
-#output * bg ~/Downloads/PXL_20231102_113718562.jpg fill
-output DP-1 bg ~/Pictures/cuyahoga-00.jpg fill
-output DP-2 bg ~/Pictures/cuyahoga-01.jpg fill
 
 #
 # Example configuration:
@@ -215,6 +211,7 @@ bindsym $mod+r mode "resize"
 for_window [app_id="lutris"] floating enable
 for_window [app_id="thunar"] floating enable
 for_window [app_id="virt-manager"] floating enable
+for_window [class="battle.net.exe"] floating enable
 
 #
 # Status Bar:
@@ -238,7 +235,7 @@ for_window [app_id="virt-manager"] floating enable
 #     }
 # }
 
-bar swaybar_command /home/brian/.config/sway/waybar-sway.sh
+bar swaybar_command waybar
 
 font pango:Hack Nerd Font Mono 12
 gaps inner 10
@@ -255,3 +252,4 @@ default_border pixel 2
 # exec waybar -c ~/.config/waybar/config-sway-bottom.jsonc -s ~/.config/waybar/style-sway.css
 
 include /etc/sway/config.d/*
+include ~/.config/sway/config.d/*

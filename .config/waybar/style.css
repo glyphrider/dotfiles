@@ -35,13 +35,13 @@ tooltip label{
     padding-right: 5px;
     padding-top: 0px;
     padding-bottom: 0px;
-    color: #000000;
+    color: #7f7f7f;
     border-radius: 10px;
     margin-right: 5px;
 }
 
 #workspaces button.focused {
-    color: #f6f7fc;
+    color: #000000;
 }
 
 #custom-launch_wofi,
@@ -78,7 +78,8 @@ tooltip label{
 #clock,
 #cpu,
 #memory,
-#temperature {
+#temperature,
+#workspaces {
     background: #f6f7fc;
     color: #15121b;
     opacity: 1;
