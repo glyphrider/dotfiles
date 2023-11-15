@@ -7,3 +7,6 @@
 [submodule "/home/brian/.asdf"]
 	path = /home/brian/.asdf
 	url = https://github.com/asdf-vm/asdf.git
+[submodule "asdf"]
+	path = /home/brian/.asdf
+	url = https://github.com/asdf-vm/asdf.git
