@@ -1,12 +1,9 @@
-[submodule ".tmux/plugins/tpm"]
+[submodule "tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule ".config/nvim"]
+[submodule "nvchad"]
 	path = .config/nvim
 	url = https://github.com/nvchad/nvchad.git
-[submodule "/home/brian/.asdf"]
-	path = /home/brian/.asdf
-	url = https://github.com/asdf-vm/asdf.git
 [submodule "asdf"]
 	path = /home/brian/.asdf
 	url = https://github.com/asdf-vm/asdf.git
