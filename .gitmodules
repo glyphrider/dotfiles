@@ -4,6 +4,3 @@
 [submodule "nvchad"]
 	path = .config/nvim
 	url = https://github.com/nvchad/nvchad.git
-[submodule "asdf"]
-	path = /home/brian/.asdf
-	url = https://github.com/asdf-vm/asdf.git
