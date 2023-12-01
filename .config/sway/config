@@ -232,6 +232,9 @@ bindsym $mod+r mode "resize"
 
 bar swaybar_command waybar
 
+exec --no-startup-id systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 font pango:Hack Nerd Font Mono 12
 gaps inner 10
 exec swayidle -w \
@@ -243,8 +246,6 @@ exec swayidle -w \
 bindsym $mod+x exec swaylock-fancy
 
 default_border pixel 2
-
-# exec waybar -c ~/.config/waybar/config-sway-bottom.jsonc -s ~/.config/waybar/style-sway.css
 
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*

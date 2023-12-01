@@ -1,6 +1,6 @@
-alias la='exa -aF --icons --color=auto --group-directories-first --git'
-alias ls='exa -aF --icons --color=auto --group-directories-first --git'
-alias ll='exa -alF --icons --color=auto --group-directories-first --git'
+alias la='eza -aF --icons --color=auto --group-directories-first --git'
+alias ls='eza -aF --icons --color=auto --group-directories-first --git'
+alias ll='eza -alF --icons --color=auto --group-directories-first --git'
 
 alias vim=nvim
 

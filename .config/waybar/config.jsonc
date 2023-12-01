@@ -22,10 +22,6 @@
         "clock"
     ],
     
-    "include": [
-        "~/.config/waybar/mesu.jsonc"
-    ],
-
     "custom/power_btn": {
         "format": "",
         "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
@@ -93,8 +89,13 @@
     },
 
     "temperature": {
-      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-      "format": "  {} 󰔄"
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        // "thermal-zone": 1,
+        "format": " {temperatureF}°F",
+        "format-alt-click": "click-right",
+        "format-alt": " {temperature}°C"
+        // "critical-threshold": 70,
+        // "format-critical": " {temperatureF}°F"
     },
 
     "clock": {

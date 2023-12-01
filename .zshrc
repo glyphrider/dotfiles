@@ -38,11 +38,11 @@ antigen apply
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-if which exa > /dev/null
+if which eza > /dev/null
 then
-	alias la='exa -aF --icons --color=auto --group-directories-first --git'
-	alias ls='exa -aF --icons --color=auto --group-directories-first --git'
-	alias ll='exa -alF --icons --color=auto --group-directories-first --git'
+	alias la='eza -aF --icons --color=auto --group-directories-first --git'
+	alias ls='eza -aF --icons --color=auto --group-directories-first --git'
+	alias ll='eza -alF --icons --color=auto --group-directories-first --git'
 fi
 
 alias emacs='emacs -nw'

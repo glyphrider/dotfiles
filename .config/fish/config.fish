@@ -12,4 +12,4 @@ if status is-interactive
   starship init fish | source
 end
 
-shadowenv init fish | source
+# shadowenv init fish | source
