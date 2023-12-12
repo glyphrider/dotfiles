@@ -1,1 +1,4 @@
-/home/brian/.config/HyprV/swaylock/config
+screenshots
+effect-greyscale
+effect-blur=4x4
+effect-vignette=0:1
