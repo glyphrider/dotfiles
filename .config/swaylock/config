@@ -1,4 +1,8 @@
+indicator
+clock
 screenshots
 effect-greyscale
 effect-blur=4x4
 effect-vignette=0:1
+indicator-radius=100
+indicator-thickness=25
