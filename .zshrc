@@ -51,6 +51,8 @@ alias vi=nvim
 alias vim=nvim
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+alias tm='tmux new-session -A -s main'
+
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 [[ -d ~/.asdf ]] || git clone https://github.com/asdf-vm/asdf.git ~/.asdf

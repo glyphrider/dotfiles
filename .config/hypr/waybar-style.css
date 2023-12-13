@@ -81,9 +81,13 @@ tooltip label{
 }
 
 #custom-hyprland {
-  color: #60d0ff;
-  padding: 2px 7px;
+  color: rgba(51,204,255,238);
+  padding: 1px 5px;
+  background: rgba(255,255,255,0.3);
+  margin: 2px 5px;
+  border-radius: 10px;
 }
+
 #temperature.critical {
     color: #e92d4d;
 }
