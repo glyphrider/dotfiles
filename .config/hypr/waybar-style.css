@@ -1,6 +1,5 @@
 * {
     border: none;
-    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 16px;
@@ -12,6 +11,8 @@ window#waybar {
   background: rgba(127,127,127,0.2);
   color: #f6f7fc;
   margin: 2px 5px;
+  border-radius: 10;
+  padding: 1px 5px;
 }
 
 tooltip {
