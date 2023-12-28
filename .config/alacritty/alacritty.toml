@@ -1,0 +1,11 @@
+[env]
+TERM = "alacritty"
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "Hack"
+
+[window]
+opacity = 0.8
