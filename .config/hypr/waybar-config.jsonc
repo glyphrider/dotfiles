@@ -18,6 +18,7 @@
     ],
     "modules-right": [
         "tray",
+        "battery",
         "cpu",
         "memory",
         "temperature",
@@ -83,11 +84,15 @@
     },
 
     "cpu": {
-      "format": "  {}%"
+      "format": "  ({}%)"
     },
 
     "memory": {
-      "format": "  {}%"
+      "format": "  ({}%)"
+    },
+
+    "battery": {
+      "format": "  ({}%)"
     },
 
     "temperature": {
