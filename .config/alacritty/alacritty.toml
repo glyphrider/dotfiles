@@ -5,7 +5,7 @@ TERM = "alacritty"
 size = 14.0
 
 [font.normal]
-family = "Hack"
+family = "NotoMonoNerdFont"
 
 [window]
 opacity = 0.8

@@ -1,6 +1,6 @@
 * {
     border: none;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Noto Mono Nerd Font";
     font-weight: bold;
     font-size: 16px;
     min-height: 0;
@@ -8,7 +8,7 @@
 
 window#waybar {
   padding: 2px;
-  background: rgba(127,127,127,0.2);
+  background: rgba(0,0,0,0.0);
   color: #f6f7fc;
   margin: 2px 5px;
   border-radius: 10;
@@ -73,12 +73,14 @@ tooltip label{
 #temperature,
 #workspaces,
 #idle_inhibitor,
+#taskbar,
 #backlight {
-    background: rgba(21, 18, 27, 0);
+    background: rgba(0, 0, 0, 0.2);
     opacity: 1;
     padding: 0px 8px;
     margin: 0px 3px;
     border: 0px;
+    border-radius: 10px;
 }
 
 #custom-hyprland {
@@ -99,6 +101,7 @@ tooltip label{
 }
 
 #window {
+    background: rgba(0,0,0,0.2);
     border-radius: 10px;
     margin-left: 0px;
     margin-right: 0px;

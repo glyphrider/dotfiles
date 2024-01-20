@@ -10,11 +10,11 @@
     "margin-right": 5,
     "margin-top": 5,
     "modules-left": [
-      "custom/hyprland",
+      "wlr/taskbar",
       "hyprland/workspaces"
     ],
     "modules-center": [
-      "wlr/taskbar"
+      "hyprland/window"
     ],
     "modules-right": [
         "tray",
@@ -36,6 +36,7 @@
       "icon-size": 16,
       "all-outputs": true,
       "tooltip-format": "{name} - {title}",
+      "on-click": "activate",
       "ignore-list": [
         "wofi"
       ]
@@ -45,6 +46,9 @@
         "format": "",
         "on-click": "sh -c '(sleep 0.5s; swaylock-fancy)' & disown",
         "tooltip": false
+    },
+    "hyprland/window": {
+	// "format": "{name} - {title}"
     },
 
     "hyprland/workspaces": {
