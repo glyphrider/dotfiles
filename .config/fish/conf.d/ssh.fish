@@ -4,11 +4,11 @@ if status is-interactive
 
 	function start_agent 
 		echo "Initialising new SSH agent..."
-		/usr/bin/ssh-agent -c | sed 's/^echo/#echo/' > "$SSH_ENV"
+		ssh-agent -c | sed 's/^echo/#echo/' > "$SSH_ENV"
 		echo succeeded
 		chmod 600 "$SSH_ENV"
 		cat "$SSH_ENV" | source
-		/usr/bin/ssh-add
+		ssh-add
 	end
 
 	# Source SSH settings, if applicable
@@ -19,8 +19,4 @@ if status is-interactive
 	else
 		start_agent
 	end
-
-	source ~/.asdf/asdf.fish
-
-	#starship init fish | source
 end
