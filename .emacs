@@ -1,4 +1,6 @@
-(setq erlang-root-dir "/usr/lib/erlang/")
+(setq erl-exe (locate-file "erl" exec-path))
+(setq erl-dir (file-name-directory erl-exe))
+(setq erlang-root-dir (concat erl-dir "../lib/erlang/"))
 (setq erlang-lib-dir (concat erlang-root-dir "lib/"))
 (setq erlang-bin-dir (concat erlang-root-dir "bin/"))
 (setq erlang-tools (car (directory-files erlang-lib-dir nil "^tools-.*")))
