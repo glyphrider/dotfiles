@@ -86,5 +86,24 @@ bindkey '^F' newterm
 # bindkey -s '^F^H' 'eval `cat ~/.histfile| fzf | awk -F "'";"'" "'"{print $2}"'"`^M'
 # bindkey -s '^F^P' '`ps -ef | fzf | awk "'"{print $2}"'"`^M'
 
+
+export SSH_ENV="${HOME}/.ssh/agent-environment.zsh"
+
+start_agent() {
+  echo "Initializing new SSH agent..."
+  ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+  echo succeeded
+  chmod 600 "${SSH_ENV}"
+  source "${SSH_ENV}"
+  ssh-add
+}
+
+if [ -f "${SSH_ENV}" ]; then
+  source "${SSH_ENV}"
+  ps -ef | grep $SSH_AGENT_PID | grep -e 'ssh-agent$' > /dev/null || start_agent
+else
+  start_agent
+fi
+
 autoload -Uz compinit
 compinit
