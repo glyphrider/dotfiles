@@ -38,6 +38,8 @@ antigen apply
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+[[ ! -d ${HOME}/.cargo/bin ]] || PATH="${HOME}/.cargo/bin:${PATH}"
+
 if which eza > /dev/null
 then
 	alias la='eza -aF --icons --color=auto --group-directories-first --git'
@@ -49,9 +51,10 @@ alias emacs='emacs -nw'
 alias fish='exec env SHELL=/usr/bin/fish /usr/bin/fish -l'
 alias vi=nvim
 alias vim=nvim
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias tm='tmux new-session -A -s main'
+alias h='dbus-launch --exit-with-session Hyprland'
 
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
@@ -64,8 +67,8 @@ if which rustup > /dev/null
 then
 	rustup completions zsh > ~/.zfunc/_rustup
 	rustup completions zsh cargo > ~/.zfunc/_cargo
-	[[ ! -d ${HOME}/.cargo/bin ]] || PATH="${HOME}/.cargo/bin:${PATH}"
 fi
+
 fpath+=~/.zfunc
 
 [[ ! -f ~/.asdf/plugins/java/set-java-home.zsh ]] || source ~/.asdf/plugins/java/set-java-home.zsh
